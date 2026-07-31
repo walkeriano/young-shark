@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ShoppingBag, ChevronRight, MessageCircle, Instagram, ArrowUpRight, Star } from "lucide-react";
-
+import logo from "../assets/logo.png";
 const WA_NUMBER = "51983552696";
 
 function waLink(product: string) {
@@ -172,7 +172,7 @@ const STATS = [
 function SharkLogo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <img src="/src/assets/logo.png" alt="Shark Logo" className="w-48 h-16" />
+      <img src={logo} alt="Shark Logo" className="w-48 h-16" />
     </div>
   );
 }

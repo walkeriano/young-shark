@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section
       id="nosotros"
-      className="relative bg-[#080808] py-24 px-6 overflow-hidden"
+      className="relative bg-[#f7f7f5] py-24 px-6 overflow-hidden"
     >
       {/* Diagonal accent */}
       <div
@@ -28,7 +28,7 @@ export default function About() {
           </div>
 
           <h2
-            className="text-white leading-none mb-8"
+            className="text-[#101010] leading-none mb-8"
             style={{ fontFamily: "Anton, sans-serif", fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
           >
             NACIMOS
@@ -38,7 +38,7 @@ export default function About() {
           </h2>
 
           <div
-            className="space-y-5 text-white/50 leading-relaxed"
+            className="space-y-5 text-[#101010]/50 leading-relaxed"
             style={{ fontFamily: "Barlow, sans-serif", fontWeight: 300 }}
           >
             <p>
@@ -82,7 +82,7 @@ export default function About() {
               className="w-full object-cover"
               style={{ maxHeight: "520px" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent" />
           </div>
 
           {/* Floating badge */}

@@ -8,19 +8,19 @@ export default function ProductCard({ p }: { p: Product }) {
 
   return (
     <div
-      className="group relative bg-[#111] overflow-hidden"
+      className="group relative bg-white overflow-hidden"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {/* Image */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-[#151515]">
+      <div className="relative aspect-[4/5] overflow-hidden bg-[#f1f1ef]">
         <img
           src={p.img}
           alt={p.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
           style={{ transform: hovered ? "scale(1.08)" : "scale(1)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-60" />
 
         {/* Badge */}
         <div className="absolute top-3 left-3">
@@ -42,7 +42,7 @@ export default function ProductCard({ p }: { p: Product }) {
             href={waLink(`${p.name} — Talle: consultar`)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-[#1a6eff] text-white px-6 py-3 text-xs font-semibold tracking-widest uppercase hover:bg-[#0f5ae0] transition-colors shadow-lg shadow-[#1a6eff]/30"
+            className="flex items-center gap-2 bg-[#1a6eff] text-white px-6 py-3 text-xs font-semibold tracking-widest uppercase hover:bg-[#0f5ae0] transition-colors shadow-lg shadow-[#1a6eff]/20"
             style={{ fontFamily: "Barlow Condensed, sans-serif" }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -55,13 +55,13 @@ export default function ProductCard({ p }: { p: Product }) {
       {/* Info */}
       <div className="p-4">
         <div
-          className="text-white/40 text-[10px] tracking-widest uppercase mb-1"
+          className="text-[#101010]/40 text-[10px] tracking-widest uppercase mb-1"
           style={{ fontFamily: "Barlow Condensed, sans-serif" }}
         >
           {p.category}
         </div>
         <h3
-          className="text-white text-base mb-2 leading-tight"
+          className="text-[#101010] text-base mb-2 leading-tight"
           style={{ fontFamily: "Barlow Condensed, sans-serif", fontWeight: 700 }}
         >
           {p.name}
@@ -73,7 +73,7 @@ export default function ProductCard({ p }: { p: Product }) {
             <Star
               key={i}
               size={10}
-              className={i < p.stars ? "text-[#1a6eff] fill-[#1a6eff]" : "text-white/20"}
+              className={i < p.stars ? "text-[#1a6eff] fill-[#1a6eff]" : "text-[#101010]/20"}
             />
           ))}
         </div>
@@ -83,7 +83,7 @@ export default function ProductCard({ p }: { p: Product }) {
           {p.colors.map((c) => (
             <div
               key={c}
-              className="w-4 h-4 rounded-full border border-white/20"
+              className="w-4 h-4 rounded-full border border-black/20"
               style={{ backgroundColor: c }}
             />
           ))}
@@ -94,7 +94,7 @@ export default function ProductCard({ p }: { p: Product }) {
           {p.sizes.slice(0, 4).map((s) => (
             <span
               key={s}
-              className="border border-white/15 text-white/50 text-[10px] px-2 py-0.5 tracking-wide"
+              className="border border-black/15 text-[#101010]/50 text-[10px] px-2 py-0.5 tracking-wide"
               style={{ fontFamily: "Barlow Condensed, sans-serif" }}
             >
               {s}
@@ -106,14 +106,14 @@ export default function ProductCard({ p }: { p: Product }) {
         <div className="flex items-center justify-between">
           <div>
             <div
-              className="text-white text-xl leading-none"
+              className="text-[#101010] text-xl leading-none"
               style={{ fontFamily: "Anton, sans-serif" }}
             >
               {p.price}
             </div>
             {p.oldPrice && (
               <div
-                className="text-white/30 text-xs line-through mt-0.5"
+                className="text-[#101010]/30 text-xs line-through mt-0.5"
                 style={{ fontFamily: "Barlow, sans-serif" }}
               >
                 {p.oldPrice}

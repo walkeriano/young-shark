@@ -3,7 +3,7 @@ import SharkLogo from "../../shared/SharkLogo/SharkLogo";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050505] border-t border-white/8 py-10 px-6">
+    <footer className="bg-[#efefec] border-t border-black/8 py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <SharkLogo />
 
@@ -14,7 +14,7 @@ export default function Footer() {
               onClick={() =>
                 document.querySelector(l.href)?.scrollIntoView({ behavior: "smooth" })
               }
-              className="text-white/30 hover:text-white text-xs tracking-widest uppercase transition-colors"
+              className="text-[#101010]/30 hover:text-[#101010] text-xs tracking-widest uppercase transition-colors"
               style={{ fontFamily: "Barlow Condensed, sans-serif" }}
             >
               {l.label}
@@ -23,7 +23,7 @@ export default function Footer() {
         </nav>
 
         <p
-          className="text-white/20 text-xs tracking-wider"
+          className="text-[#101010]/20 text-xs tracking-wider"
           style={{ fontFamily: "Barlow, sans-serif" }}
         >
           © 2025 YOUNGSHARK. Todos los derechos reservados.

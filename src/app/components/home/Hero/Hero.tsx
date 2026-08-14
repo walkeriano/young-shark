@@ -6,18 +6,18 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#080808]"
+      className="relative min-h-screen flex items-center overflow-hidden bg-[#f7f7f5]"
     >
       {/* BG image */}
       <div className="absolute inset-0">
         <img
           src="https://i.pinimg.com/originals/da/24/a6/da24a6501387c6069075d6fd00a0ef5c.jpg"
           alt="Atleta entrenando"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-20"
           style={{ objectPosition: "60% center" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-[#080808]/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f7f7f5] via-[#f7f7f5]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#f7f7f5] via-transparent to-transparent" />
       </div>
 
       {/* Blue accent line */}
@@ -28,7 +28,7 @@ export default function Hero() {
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px)",
+            "linear-gradient(rgba(0,0,0,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.35) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
         }}
       />
@@ -48,7 +48,7 @@ export default function Hero() {
 
           {/* Headline */}
           <h1
-            className="text-white leading-none mb-6"
+            className="text-[#101010] leading-none mb-6"
             style={{
               fontFamily: "Anton, sans-serif",
               fontSize: "clamp(4rem, 11vw, 9rem)",
@@ -56,14 +56,14 @@ export default function Hero() {
               lineHeight: 0.9,
             }}
           >
-            50% DSCTO
+            STYLO,
             <br />
-            <span className="text-[#1a6eff]">TODO JULIO</span>
+            <span className="text-[#1a6eff]">MODA &</span>
             <br />
-            FIESTAS PATRIAS
+            CALIDAD
           </h1>
           <p
-            className="text-white/50 text-lg mb-10 max-w-md leading-relaxed"
+            className="text-[#101010]/50 text-lg mb-10 max-w-md leading-relaxed"
             style={{ fontFamily: "Barlow, sans-serif", fontWeight: 300 }}
           >
             Tienda multimarca peruana diseñada para los que no se detienen. Calidad y garantía.
@@ -89,7 +89,7 @@ export default function Hero() {
               href={waLink("consulta sobre colección 2025")}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 border border-white/20 text-white px-8 py-4 text-sm font-semibold tracking-widest uppercase transition-all duration-200 hover:border-[#1a6eff] hover:text-[#1a6eff]"
+              className="flex items-center gap-3 border border-black/20 text-[#101010] px-8 py-4 text-sm font-semibold tracking-widest uppercase transition-all duration-200 hover:border-[#1a6eff] hover:text-[#1a6eff]"
               style={{ fontFamily: "Barlow Condensed, sans-serif" }}
             >
               <MessageCircle size={16} />
@@ -99,7 +99,7 @@ export default function Hero() {
         </div>
 
         {/* Stats row */}
-        <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/8 pt-10">
+        <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-black/8 pt-10">
           {STATS.map((s) => (
             <div key={s.label}>
               <div
@@ -109,7 +109,7 @@ export default function Hero() {
                 {s.value}
               </div>
               <div
-                className="text-white/40 text-xs tracking-widest uppercase"
+                className="text-[#101010]/40 text-xs tracking-widest uppercase"
                 style={{ fontFamily: "Barlow Condensed, sans-serif" }}
               >
                 {s.label}
@@ -121,9 +121,9 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 right-8 flex flex-col items-center gap-2 opacity-40">
-        <div className="w-px h-12 bg-white animate-pulse" />
+        <div className="h-12 w-px bg-black animate-pulse" />
         <span
-          className="text-white text-[10px] tracking-[0.3em] uppercase rotate-90 origin-center"
+          className="text-[#101010] text-[10px] tracking-[0.3em] uppercase rotate-90 origin-center"
           style={{ fontFamily: "Barlow Condensed, sans-serif" }}
         >
           Scroll

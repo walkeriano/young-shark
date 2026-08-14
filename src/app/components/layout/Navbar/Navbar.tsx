@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { LogIn, Menu, MessageCircle, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { NAV_LINKS } from "../../../data/home";
 import { waLink } from "../../../lib/whatsapp";
 import SharkLogo from "../../shared/SharkLogo/SharkLogo";
@@ -22,7 +23,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#080808]/95 backdrop-blur-md border-b border-white/8" : "bg-transparent"
+        scrolled ? "bg-white/95 backdrop-blur-md border-b border-black/8" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -33,7 +34,7 @@ export default function Navbar() {
             <li key={l.label}>
               <button
                 onClick={() => scrollTo(l.href)}
-                className="text-white/70 hover:text-white text-sm font-medium tracking-widest uppercase transition-colors duration-200"
+                className="text-[#101010]/70 hover:text-[#101010] text-sm font-medium tracking-widest uppercase transition-colors duration-200"
                 style={{ fontFamily: "Barlow Condensed, sans-serif" }}
               >
                 {l.label}
@@ -43,6 +44,17 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:flex items-center gap-4">
+          <Link
+            to="/login"
+            className="flex items-center gap-2 border border-[#1a6eff] px-5 py-2.5 text-sm font-semibold uppercase tracking-wider text-[#1a6eff] transition-all duration-200 hover:bg-[#1a6eff] hover:text-white"
+            style={{
+              fontFamily: "Barlow Condensed, sans-serif",
+              clipPath: "polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)",
+            }}
+          >
+            <LogIn size={15} />
+            Iniciar sesión
+          </Link>
           <a
             href={waLink("consulta general")}
             target="_blank"
@@ -56,7 +68,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden text-white p-1"
+          className="md:hidden text-[#101010] p-1"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -65,17 +77,26 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-[#080808] border-t border-white/8 px-6 py-6 flex flex-col gap-6">
+        <div className="md:hidden bg-[#f7f7f5] border-t border-black/8 px-6 py-6 flex flex-col gap-6">
           {NAV_LINKS.map((l) => (
             <button
               key={l.label}
               onClick={() => scrollTo(l.href)}
-              className="text-white text-left text-lg tracking-widest uppercase"
+              className="text-[#101010] text-left text-lg tracking-widest uppercase"
               style={{ fontFamily: "Anton, sans-serif" }}
             >
               {l.label}
             </button>
           ))}
+          <Link
+            to="/login"
+            onClick={() => setOpen(false)}
+            className="flex w-full items-center justify-center gap-2 border border-[#1a6eff] px-5 py-3 text-sm font-semibold uppercase tracking-wider text-[#1a6eff] transition-colors hover:bg-[#1a6eff] hover:text-white"
+            style={{ fontFamily: "Barlow Condensed, sans-serif" }}
+          >
+            <LogIn size={16} />
+            Login
+          </Link>
           <a
             href={waLink("consulta general")}
             target="_blank"

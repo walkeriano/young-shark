@@ -6,7 +6,7 @@ export default function Brands() {
   const [active, setActive] = useState<string | null>(null);
 
   return (
-    <section className="bg-[#080808] py-24 px-6">
+    <section className="bg-[#f7f7f5] py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-14">
           <div>
@@ -20,7 +20,7 @@ export default function Brands() {
               </span>
             </div>
             <h2
-              className="text-white leading-none"
+              className="text-[#101010] leading-none"
               style={{ fontFamily: "Anton, sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
             >
               LAS MEJORES MARCAS
@@ -29,7 +29,7 @@ export default function Brands() {
             </h2>
           </div>
           <p
-            className="hidden md:block text-white/40 text-sm max-w-xs text-right leading-relaxed"
+            className="hidden md:block text-[#101010]/40 text-sm max-w-xs text-right leading-relaxed"
             style={{ fontFamily: "Barlow, sans-serif", fontWeight: 300 }}
           >
             Cinco categorías, un solo propósito: llevarte al próximo nivel.
@@ -44,7 +44,7 @@ export default function Brands() {
               onClick={() =>
                 document.querySelector("#productos")?.scrollIntoView({ behavior: "smooth" })
               }
-              className="relative group overflow-hidden aspect-[3/4] bg-[#111]"
+              className="relative group overflow-hidden aspect-[3/4] bg-white"
             >
               <img
                 src={cat.img}
@@ -71,7 +71,7 @@ export default function Brands() {
                   {cat.name}
                 </div>
                 <div
-                  className="text-white/40 text-xs tracking-wider mb-2"
+                  className="text-white/60 text-xs tracking-wider mb-2"
                   style={{ fontFamily: "Barlow Condensed, sans-serif" }}
                 >
                   {cat.desc}

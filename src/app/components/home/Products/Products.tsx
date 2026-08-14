@@ -11,7 +11,7 @@ export default function Products() {
     filter === "Todos" ? PRODUCTS : PRODUCTS.filter((p) => p.category === filter);
 
   return (
-    <section id="productos" className="bg-[#0a0a0a] py-24 px-6">
+    <section id="productos" className="bg-white py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
@@ -25,7 +25,7 @@ export default function Products() {
               </span>
             </div>
             <h2
-              className="text-white leading-none"
+              className="text-[#101010] leading-none"
               style={{ fontFamily: "Anton, sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
             >
               NUESTRA
@@ -43,7 +43,7 @@ export default function Products() {
                 className={`px-4 py-2 text-xs tracking-widest uppercase transition-all duration-200 border ${
                   filter === c
                     ? "bg-[#1a6eff] border-[#1a6eff] text-white"
-                    : "border-white/15 text-white/50 hover:border-white/40 hover:text-white"
+                    : "border-black/15 text-[#101010]/50 hover:border-black/40 hover:text-[#101010]"
                 }`}
                 style={{ fontFamily: "Barlow Condensed, sans-serif" }}
               >
@@ -65,7 +65,7 @@ export default function Products() {
             href={waLink("catálogo completo")}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 border border-white/20 text-white px-10 py-4 text-sm font-semibold tracking-widest uppercase hover:border-[#1a6eff] hover:text-[#1a6eff] transition-all duration-200"
+            className="flex items-center gap-3 border border-black/20 text-[#101010] px-10 py-4 text-sm font-semibold tracking-widest uppercase hover:border-[#1a6eff] hover:text-[#1a6eff] transition-all duration-200"
             style={{ fontFamily: "Barlow Condensed, sans-serif" }}
           >
             Ver catálogo completo por WhatsApp

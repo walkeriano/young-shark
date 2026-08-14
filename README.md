@@ -1,11 +1,18 @@
 
-  # Ecommerce website design proposal
+# YOUNGSHARK Store
 
-  This is a code bundle for Ecommerce website design proposal. The original project is available at https://www.figma.com/design/rCKqTFjkZADfOCn76mUHVU/Ecommerce-website-design-proposal.
+Frontend de la tienda online YOUNGSHARK, construido con React, TypeScript, Vite y Tailwind CSS.
 
-  ## Running the code
+## Desarrollo
 
-  Run `npm i` to install the dependencies.
+```bash
+npm install
+npm run dev
+```
 
-  Run `npm run dev` to start the development server.
+## Producción
+
+```bash
+npm run build
+```
   

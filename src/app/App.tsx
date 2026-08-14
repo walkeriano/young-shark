@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, ShoppingBag, ChevronRight, MessageCircle, Instagram, ArrowUpRight, Star } from "lucide-react";
 import logo from "../assets/logo.png";
 const WA_NUMBER = "51983552696";

@@ -7,7 +7,6 @@ export default function ContactSection() {
       id="contacto"
       className="relative bg-[#f7f7f5] py-24 px-6 overflow-hidden"
     >
-      {/* BG texture */}
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
@@ -30,7 +29,10 @@ export default function ContactSection() {
 
         <h2
           className="text-[#101010] leading-none mb-6"
-          style={{ fontFamily: "Anton, sans-serif", fontSize: "clamp(3rem, 8vw, 7rem)" }}
+          style={{
+            fontFamily: "Anton, sans-serif",
+            fontSize: "clamp(3rem, 8vw, 7rem)",
+          }}
         >
           50% de DSCTO
           <br />
@@ -41,8 +43,8 @@ export default function ContactSection() {
           className="text-[#101010]/40 text-lg mb-10 max-w-lg mx-auto leading-relaxed"
           style={{ fontFamily: "Barlow, sans-serif", fontWeight: 300 }}
         >
-          Escribinos por WhatsApp para consultas sobre productos, talles, envíos y
-          disponibilidad. Respondemos rápido.
+          Escribinos por WhatsApp para consultas sobre productos, talles, envíos
+          y disponibilidad. Respondemos rápido.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -53,12 +55,16 @@ export default function ContactSection() {
             className="group flex items-center gap-3 bg-[#1a6eff] text-white px-10 py-5 text-base font-semibold tracking-widest uppercase hover:bg-[#0f5ae0] transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-[#1a6eff]/20"
             style={{
               fontFamily: "Barlow Condensed, sans-serif",
-              clipPath: "polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%)",
+              clipPath:
+                "polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%)",
             }}
           >
             <MessageCircle size={20} />
             Escribir por WhatsApp
-            <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            <ArrowUpRight
+              size={16}
+              className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
           </a>
         </div>
 
